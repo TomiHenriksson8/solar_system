@@ -23,6 +23,7 @@ marsTexture.colorSpace = THREE.SRGBColorSpace;
 const moonTexture = textureLoader.load("/textures/2k_moon.jpg");
 moonTexture.colorSpace = THREE.SRGBColorSpace;
 
+// add background cubemap
 const backgroundCubemap = cubeTextureLoader.load([
   "px.png",
   "nx.png",
@@ -51,7 +52,6 @@ const moonMaterial = new THREE.MeshStandardMaterial({
   map: moonTexture,
 });
 
-// add stuff here
 const sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
 const sunMaterial = new THREE.MeshBasicMaterial({
   map: sunTexture,
